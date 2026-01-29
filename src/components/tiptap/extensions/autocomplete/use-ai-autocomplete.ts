@@ -67,6 +67,7 @@ export function useAIAutocomplete({
 
       const processed = config.postProcess(completionProvider.completion)
       console.log("📝 Updating pending completion from provider:", processed)
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPendingCompletion(processed)
       pendingCompletionRef.current = processed
     }
@@ -267,6 +268,7 @@ export function useAIAutocomplete({
 
   // Update ghost position when relevant state changes
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     updateGhostPosition()
   }, [pendingCompletion, updateGhostPosition])
 

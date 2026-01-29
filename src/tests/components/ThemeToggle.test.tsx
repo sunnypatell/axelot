@@ -14,7 +14,7 @@ vi.mock("@mui/material", () => ({
   useTheme: () => ({
     shadows: ["none", "shadow1", "shadow2"],
   }),
-  Box: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+  Box: ({ children, ...props }: Record<string, unknown> & { children?: React.ReactNode }) => <div {...props}>{children}</div>,
 }))
 
 vi.mock("@mui/icons-material", () => ({
@@ -32,7 +32,7 @@ describe("ThemeToggle", () => {
       mode: undefined,
       setMode: mockSetMode,
     })
-    const { container } = render(<ThemeToggle />)
+    render(<ThemeToggle />)
     // Should not have role button in loading state
     expect(screen.queryByRole("button")).not.toBeInTheDocument()
   })

@@ -1,6 +1,6 @@
 import { findChildren } from "@tiptap/core"
 import { Plugin, PluginKey } from "@tiptap/pm/state"
-import { Decoration, DecorationSet, EditorView } from "@tiptap/pm/view"
+import { Decoration, DecorationSet } from "@tiptap/pm/view"
 import type { Node as ProseMirrorNode } from "@tiptap/pm/model"
 
 let mermaidReady = false
@@ -196,7 +196,7 @@ function createDecorations(doc: ProseMirrorNode, codeBlockName: string) {
     // Create the preview widget (Always created, visibility controlled by CSS)
     const widget = Decoration.widget(
       pos,
-      (view: EditorView) => {
+      () => {
         const outer = document.createElement("div")
         outer.className = "tiptap-mermaid-preview"
         outer.dataset.renderId = renderId

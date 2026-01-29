@@ -1,6 +1,5 @@
 import { connection, NextRequest, NextResponse } from "next/server"
 import { firebaseAdminFirestore } from "@/lib/firebase/server"
-import { SerializableDocument, type Document } from "@/types/document"
 import { extractPreview } from "@/lib/utils"
 import { serializeDocument } from "@/lib/serializers/document"
 

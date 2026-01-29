@@ -18,7 +18,7 @@ describe("Text Transform API", () => {
       },
     })
 
-    ;(global.fetch as any).mockResolvedValue({
+    ;(global.fetch as unknown as ReturnType<typeof vi.fn>).mockResolvedValue({
       body: mockStream,
     })
 
@@ -53,7 +53,7 @@ describe("Text Transform API", () => {
       },
     })
 
-    ;(global.fetch as any).mockResolvedValue({
+    ;(global.fetch as unknown as ReturnType<typeof vi.fn>).mockResolvedValue({
       body: mockStream,
     })
 

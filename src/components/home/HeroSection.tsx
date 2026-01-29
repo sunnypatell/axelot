@@ -181,7 +181,7 @@ export const HeroSection = () => {
             <Button
               variant="outlined"
               size="large"
-              href="https://r0yce.com/projects/axelot"
+              href="/docs"
               sx={{
                 px: 4,
                 py: 1.5,

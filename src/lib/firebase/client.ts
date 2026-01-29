@@ -27,7 +27,7 @@ isSupported().then((supported) => {
   }
 })
 
-const logEvent = (eventName: string, eventParams?: Record<string, any>) => {
+const logEvent = (eventName: string, eventParams?: Record<string, unknown>) => {
   if (analytics) {
     firebaseLogEvent(analytics, eventName, eventParams)
   }

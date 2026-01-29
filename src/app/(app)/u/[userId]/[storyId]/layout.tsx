@@ -103,10 +103,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     story.description ||
     story.preview ||
     `Read "${title}" on Axelot - A collaborative storytelling platform.`
-  const authors =
-    story.authorNames && story.authorNames.length > 0
-      ? story.authorNames.join(", ")
-      : "Axelot Community"
   const slug = story.slug || "untitled"
   const url = `${BASE_URL}/u/${userId}/${storyId}-${slug}`
 

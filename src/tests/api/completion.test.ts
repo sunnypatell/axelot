@@ -18,7 +18,7 @@ describe("Completion API", () => {
       },
     })
 
-    ;(global.fetch as any).mockResolvedValue({
+    ;(global.fetch as unknown as ReturnType<typeof vi.fn>).mockResolvedValue({
       body: mockStream,
     })
 
