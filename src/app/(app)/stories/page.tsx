@@ -47,10 +47,10 @@ import {
   documentRef,
   documentsByOwnerRef,
 } from "@/lib/converters/document"
+import { logEvent } from "@/lib/firebase/client"
 import { timeAgo } from "@/lib/utils"
 import { useAuth } from "@/hooks/use-auth"
 import { useFirebaseReady } from "@/hooks/use-firebase-ready"
-import { logEvent } from "@/lib/firebase/client"
 
 export default function StoriesPage() {
   const { user, isAuthenticated, isLoading } = useAuth()

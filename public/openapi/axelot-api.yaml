@@ -556,7 +556,6 @@ paths:
         - **View count** (logarithmic scaling to prevent viral domination)
         - **Recency boost** (linear decay over 24 hours since last update)
         - **Age penalty** (exponential decay based on creation age)
-        - **Activity boost** (extra weight for very recently updated stories)
 
         The formula:
         `score = log10(views + 1) * 4 + recencyBoost * 10 - agePenalty * 0.1`
@@ -692,8 +691,9 @@ paths:
                     success: true
                     mode: stats
                     stats:
-                      totalPublicDocuments: 500
-                      documentsNeedingUpdate: 42
+                      total: 500
+                      withScores: 458
+                      needingUpdate: 42
                       recentlyUpdated: 15
                     duration: 89
         "401":
@@ -1138,11 +1138,15 @@ components:
         stats:
           type: object
           properties:
-            totalPublicDocuments:
+            total:
               type: integer
               description: Total number of public, non-archived stories.
               example: 500
-            documentsNeedingUpdate:
+            withScores:
+              type: integer
+              description: Stories that already have a computed trending score.
+              example: 458
+            needingUpdate:
               type: integer
               description: Stories with stale or missing trending scores.
               example: 42

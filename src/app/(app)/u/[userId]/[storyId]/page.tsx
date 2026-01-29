@@ -64,6 +64,7 @@ import {
   where,
 } from "firebase/firestore"
 import * as Y from "yjs"
+import { AccessLevel } from "@/types/access"
 import { Document } from "@/types/document"
 import { User } from "@/types/user"
 import { generateSlug } from "@/lib/content-utils"
@@ -73,10 +74,9 @@ import { syncAuthorNames } from "@/lib/update-author-data"
 import { stringToHslColor, timeAgo } from "@/lib/utils"
 import { FireProvider } from "@/lib/y-fire"
 import { useAuth } from "@/hooks/use-auth"
-import { useFirebaseReady } from "@/hooks/use-firebase-ready"
 import { useDocumentView } from "@/hooks/use-document-view"
+import { useFirebaseReady } from "@/hooks/use-firebase-ready"
 import { TableOfContents, TocAnchor } from "@/components/tiptap/TableOfContents"
-import { AccessLevel } from "@/types/access"
 
 const Tiptap = dynamic(() => import("@/components/tiptap/tiptap"), {
   ssr: false,

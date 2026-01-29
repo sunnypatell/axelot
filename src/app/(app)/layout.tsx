@@ -1,6 +1,6 @@
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript"
-import { Providers } from "@/components/Providers"
 import { Header } from "@/components/header"
+import { Providers } from "@/components/Providers"
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (

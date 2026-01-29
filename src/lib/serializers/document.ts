@@ -1,5 +1,5 @@
-import { Document, SerializableDocument } from "@/types/document"
 import { Timestamp } from "firebase/firestore"
+import { Document, SerializableDocument } from "@/types/document"
 
 /**
  * Serializes a Firestore Document to a SerializableDocument

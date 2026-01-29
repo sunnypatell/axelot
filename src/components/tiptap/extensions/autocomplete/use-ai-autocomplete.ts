@@ -1,14 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import type { Editor } from "@tiptap/react"
-import type {
-  AICompletionProvider,
-  AIAutocompleteOptions,
-  GhostTextPosition,
-} from "./types"
 import {
   registerAIAutocompleteHandlers,
   unregisterAIAutocompleteHandlers,
 } from "./ai-autocomplete"
+import type {
+  AIAutocompleteOptions,
+  AICompletionProvider,
+  GhostTextPosition,
+} from "./types"
 
 interface UseAIAutocompleteProps {
   editor: Editor | null

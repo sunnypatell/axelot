@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { DM_Sans, Outfit, EB_Garamond } from "next/font/google"
+import { DM_Sans, EB_Garamond, Outfit } from "next/font/google"
 import "@/styles/globals.css"
 
 const dmSans = DM_Sans({

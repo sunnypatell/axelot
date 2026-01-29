@@ -1,10 +1,10 @@
-import { getApps, initializeApp } from "firebase/app"
 import {
+  logEvent as firebaseLogEvent,
   getAnalytics,
   isSupported,
-  logEvent as firebaseLogEvent,
   type Analytics,
 } from "firebase/analytics"
+import { getApps, initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 

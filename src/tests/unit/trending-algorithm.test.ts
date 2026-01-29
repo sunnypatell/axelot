@@ -1,13 +1,13 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest"
 import { Timestamp } from "firebase/firestore"
-import {
-  calculateTrendingScore,
-  sortByTrending,
-  shouldRecomputeTrendingScore,
-  batchComputeTrendingScores,
-  getActivityBoost,
-} from "@/lib/trending-algorithm"
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import { Document } from "@/types/document"
+import {
+  batchComputeTrendingScores,
+  calculateTrendingScore,
+  getActivityBoost,
+  shouldRecomputeTrendingScore,
+  sortByTrending,
+} from "@/lib/trending-algorithm"
 
 // Helper to create a mock Document with specific timestamps
 function createMockDocument(overrides: Partial<Document> = {}): Document {
